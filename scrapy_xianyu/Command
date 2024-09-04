@@ -1,0 +1,18 @@
+scrapy startproject 项目名
+scrapy genspider 爬虫名 域名
+scrapy crawl 爬虫名
+brew services start redis 启动redis
+
+redis-cli -h 127.0.0.1 链接redis
+lpush gitee_redis_1:start_urls https://gitee.com/explore
+
+scrapyd
+http://localhost:6800/listprojects.json  查看现有服务
+scrapyd-deploy -l  扫喵
+scrapyd-deploy -p GITEE
+curl http://localhost:6800/schedule.json -d project=gitee -d spider = GITEE
+curl http://localhost:6800/daemonstatus.json 任务状态
+curl http://localhost:6800/cancel.json -d project=Gitee -d job=bce90b6a691111efaf2bacde48001122 终止服务
+curl http://localhost:6800/listjobs.json?project=Gitee
+
+
